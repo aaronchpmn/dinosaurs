@@ -61,26 +61,6 @@ export default {
   components: {
     Dinosaur
   },
-  methods: {
-    sort: function(event) {
-      sort = event.target.value
-
-      if(sort === this.currentSort) {
-        switch(this.currentSortDir) {
-          case 'asc':
-            this.currentSortDir = 'desc'
-            break;
-          case 'desc':
-            this.currentSortDir = 'asc'
-            break;
-          default:
-            console.log('An error has occured deciding sort order')
-        }
-      }
-
-      this.currentSort = sort
-    }
-  },
   computed: {
     sortedDinosaurs: function() {
       return this.dinosaurs.sort((a,b) => {
