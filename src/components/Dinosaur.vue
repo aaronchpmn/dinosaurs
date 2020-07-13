@@ -2,7 +2,7 @@
 	<tr>
 		<td><a v-bind:href="'/dinosaur/'+ dinosaur.id">{{dinosaur.name}}</a></td>
 		<td>{{Number(dinosaur.weight).toLocaleString()}}kg</td>
-		<td>{{Number(dinosaur.height).toLocaleString()}}m</td>
+		<td>{{Number(dinosaur.height).toFixed(2)}}m</td>
 		<td>{{dinosaur.lastUpdated}}</td>
 	</tr>
 </template>
